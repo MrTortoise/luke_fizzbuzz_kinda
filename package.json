@@ -4,7 +4,8 @@
   "description": "1\r 2\r fizz\r 4\r buzz\r fizz\r 7\r 8\r fizz\r buzz\r 11\r fizz\r 13\r 14\r fizzbuzz\r 16\r 17\r fizz",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch", 
+    "test-once": "jest"
   },
   "repository": {
     "type": "git",
