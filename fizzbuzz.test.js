@@ -1,16 +1,28 @@
 function fizzBuzz(a){
+    if(isFizzBuzz(a)) {
+        return 'fizzbuzz'
+    }
+
     if (isFizz(a)){
         return 'fizz'
     } 
-    if (a === 5){
+    if (isBuzz(a)){
         return 'buzz'
     }
   
   return a;
 }
 
+function isFizzBuzz(a){
+    return isFizz(a) && isBuzz(a)
+}
+
 function isFizz(a){
     return a % 3 == 0
+}
+
+function isBuzz(a){
+    return a % 5 == 0
 }
 
 
@@ -32,4 +44,24 @@ test('5 is buzz', ()=>{
 
 test('6 is fizz', ()=>{
     expect(fizzBuzz(6)).toBe('fizz')
+})
+
+test('7 is 7', ()=>{
+    expect(fizzBuzz(7)).toBe(7)
+})
+
+test('9 is fizz', ()=>{
+    expect(fizzBuzz(9)).toBe('fizz')
+})
+
+test('10 is buzz', ()=>{
+    expect(fizzBuzz(10)).toBe('buzz')
+})
+
+test('15 is fizzbuzz', ()=>{
+    expect(fizzBuzz(15)).toBe('fizzbuzz')
+})
+
+test('30 is fizzbuzz', ()=>{
+    expect(fizzBuzz(30)).toBe('fizzbuzz')
 })
