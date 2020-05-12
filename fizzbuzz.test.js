@@ -1,11 +1,16 @@
 function fizzBuzz(a){
-    if (a === 3){
+    if (isFizz(a)){
         return 'fizz'
     } 
     if (a === 5){
         return 'buzz'
     }
-return a;
+  
+  return a;
+}
+
+function isFizz(a){
+    return a % 3 == 0
 }
 
 
@@ -23,4 +28,8 @@ test('3 is fizz', ()=>{
 
 test('5 is buzz', ()=>{
     expect(fizzBuzz(5)).toBe('buzz')
+})
+
+test('6 is fizz', ()=>{
+    expect(fizzBuzz(6)).toBe('fizz')
 })
